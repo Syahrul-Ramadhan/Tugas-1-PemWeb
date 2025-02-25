@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+.identitas,
+.daftarTugas {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.daftarTugas p {
+  margin-bottom: 5px;
+}
+
+.daftarTugas a {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h4,
+p {
+  margin-top: 20px;
+  color: #555;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+a {
+  text-decoration: none;
+}
