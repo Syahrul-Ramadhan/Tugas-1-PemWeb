@@ -1,61 +1,58 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  text-align: center;
+  background-color: #0d1117;
+  color: #c9d1d9;
   margin: 0;
   padding: 20px;
 }
-.identitas,
-.daftarTugas {
-  text-align: left;
-  margin-left: 20px;
-}
-
-.daftarTugas p {
-  margin-bottom: 5px;
-}
-
-.daftarTugas a {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
 .container {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  max-width: 1000px;
+  width: 100%;
   margin: auto;
+  padding: 24px;
+  overflow: hidden;
+  background: #161b22;
 }
+.profile-container {
+  margin: 24px;
 
-h3 {
-  color: #333;
-  margin-bottom: 10px;
+  align-items: center;
+  float: left;
 }
-
-h4,
-p {
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+h2 {
   margin-top: 20px;
-  color: #555;
 }
-
-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 8px 16px;
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.task-card {
+  background: #21262d;
+  padding: 15px;
+  border-radius: 6px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+.card-header h3 {
+  margin: 0;
+}
+.date {
+  background: #30363d;
+  color: #c9d1d9;
+  padding: 3px 8px;
+  border-radius: 12px;
   font-size: 14px;
-  border-radius: 5px;
-  margin-top: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
 }
-
-button:hover {
-  background-color: #2980b9;
-}
-
 a {
-  text-decoration: none;
+  color: #007bff;
 }
