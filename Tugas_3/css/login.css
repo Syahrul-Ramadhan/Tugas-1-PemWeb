@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f5f5;
+  margin: 0;
+}
+.container {
+  display: flex;
+  width: 800px;
+  height: 450px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.login-box {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login-box h2 {
+  color: #2cbfae;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+form {
+  margin-top: 10px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.forgot-password {
+  font-size: 12px;
+  text-align: right;
+  color: #666;
+  margin-top: 20px;
+}
+.sign-in-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background: #2cbfae;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  -moz-border-radius: 12px;
+}
+.signup-box {
+  flex: 1;
+  background: #2cbfae;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+.signup-box button {
+  background: white;
+  color: #2cbfae;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
