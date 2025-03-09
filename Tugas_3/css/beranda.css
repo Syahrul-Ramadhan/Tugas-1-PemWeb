@@ -51,22 +51,109 @@ header {
   align-items: center;
   padding: 0 16px;
 }
-.nav-menu {
+
+.burger-menu {
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  margin: 50px;
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+  left: 50px;
+}
+.burger-menu span,
+.burger-menu span:before,
+.burger-menu span:after {
+  background: #14b8a6;
   display: block;
-  position: static;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  background-color: transparent;
-  box-shadow: 0 0 #0000;
-  border-radius: 0;
-  max-width: 100%;
-  width: 100%;
-  right: 1rem;
+  height: 4px;
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+.burger-menu span:before,
+.burger-menu span:after {
+  content: "";
+}
+.burger-menu span {
+  right: 0px;
+  top: 13px;
+  width: 27px;
+}
+.burger-menu span:before {
+  left: 0px;
+  top: -10px;
+  width: 16px;
+}
+.burger-menu span:after {
+  left: 0px;
+  top: 10px;
+  width: 20px;
+}
+
+.burger-menu.close span {
+  transform: rotate(-45deg);
+  top: 13px;
+  width: 27px;
+}
+.burger-menu.close span:before {
+  top: 0px;
+  transform: rotate(90deg);
+  width: 27px;
+}
+.burger-menu.close span:after {
+  top: 0px;
+  left: 0;
+  transform: rotate(90deg);
+  opacity: 0;
+  width: 0;
+}
+
+.menu {
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  padding-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+}
+
+.menu li {
+  list-style: none;
+}
+.menu a {
+  color: #fff;
+  display: block;
+  font-size: 24px;
+  margin-bottom: 24px;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
   top: 100%;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
+  right: 1rem;
+  padding: 1.25rem 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  max-width: 250px;
+  width: 100%;
 }
 
 .nav-list {
@@ -86,6 +173,10 @@ header {
 
 .nav-item:hover {
   color: #14b8a6;
+}
+
+.auth-buttons {
+  display: none;
 }
 
 .auth-buttons a {
@@ -114,14 +205,14 @@ header {
 }
 
 .hero-content {
-  width: 50%;
+  width: 100%;
   align-self: center;
   padding: 0 16px;
 }
 
 .hero-content h1 {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 600;
   color: #14b8a6;
 }
@@ -138,8 +229,8 @@ h1 span {
 .hero-content h2 {
   font-weight: 500;
   color: #64748b;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 28px;
   margin-bottom: 20px;
 }
 
@@ -174,15 +265,14 @@ h1 span {
 }
 
 .hero-img {
-  width: 50%;
+  width: 100%;
   align-self: flex-end;
   padding: 0 16px;
 }
 
 .img-container {
   position: relative;
-  margin-top: 36px;
-  right: -15%;
+  margin-top: 40px;
 }
 
 .img-container img {
@@ -214,7 +304,7 @@ h1 span {
 }
 
 .about-content {
-  width: 50%;
+  width: 100%;
   padding: 0 16px;
   margin-bottom: 40px;
 }
@@ -231,22 +321,22 @@ h1 span {
 .about-content h2 {
   font-weight: 700;
   color: #0f172a;
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 30px;
+  line-height: 36px;
   margin-bottom: 20px;
   max-width: 448px;
 }
 
 .about-content p {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   color: #64748b;
   max-width: 576px;
 }
 
 .connect-content {
-  max-width: 50%;
+  max-width: 100%;
   padding: 0 16px;
 }
 
@@ -254,15 +344,14 @@ h1 span {
   font-weight: 600;
   color: #0f172a;
   margin-bottom: 16px;
-  font-size: 30px;
-  line-height: 36px;
-  padding-top: 40px;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .connect-content p {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   color: #64748b;
   margin-bottom: 24px;
 }
@@ -323,15 +412,15 @@ h1 span {
 .skill-content h2 {
   font-weight: 700;
   color: white;
-  font-size: 48px;
-  line-height: 1;
+  font-size: 30px;
+  line-height: 36px;
   margin-bottom: 16px;
 }
 
 .skill-content p {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   color: #64748b;
 }
 
@@ -424,15 +513,15 @@ h1 span {
 .title-content h2 {
   font-weight: 700;
   color: #0f172a;
-  font-size: 48px;
-  line-height: 1;
+  font-size: 30px;
+  line-height: 36px;
   margin-bottom: 16px;
 }
 
 .title-content p {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   color: #64748b;
 }
 
@@ -447,7 +536,6 @@ h1 span {
 .project-content {
   margin-bottom: 48px;
   padding: 16px;
-  width: 50%;
 }
 
 .project-img {
@@ -670,7 +758,30 @@ footer {
 }
 
 /* Responsive */
+@media (min-width: 640) {
+  .skill-content h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .title-content h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
 @media (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .skill-content p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .project-content {
+    width: 50%;
+  }
   .personal-info {
     width: 33.3333%;
   }
@@ -680,9 +791,87 @@ footer {
 }
 
 @media (min-width: 1024px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .auth-buttons {
+    display: block;
+  }
+
+  .nav-menu {
+    display: block;
+    position: static;
+    background-color: transparent;
+    max-width: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .hero-content {
+    width: 50%;
+  }
+
+  .hero-content h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .hero-img {
+    width: 50%;
+  }
+
+  .img-container {
+    margin-top: 36px;
+    right: -15%;
+  }
+
+  .about-content {
+    width: 50%;
+  }
+
+  .about-content h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .about-content p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .connect-content {
+    max-width: 50%;
+  }
+
+  .connect-content h3 {
+    font-size: 30px;
+    line-height: 36px;
+    padding-top: 40px;
+  }
+
+  .connect-content p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .skill-content h2 {
+    font-size: 48px;
+    line-height: 1;
+  }
+
   .skill-icons a {
     margin-left: 24px;
     margin-right: 24px;
+  }
+
+  .title-content h2 {
+    font-size: 48px;
+    line-height: 1;
+  }
+  .title-content p {
+    font-size: 18px;
+    line-height: 28px;
   }
   .form-container {
     width: 50%;
